@@ -61,5 +61,6 @@
 <script src="../../dist/js/demo.js"></script>
 
 @stack('scripts')
+
 </body>
 </html>

@@ -8,6 +8,14 @@
       </div>
       <!-- /.card-header -->
       <div class="card-body">
+      	@if(session('success'))
+      		<div class="alert alert-success">
+      			{{ session('success')}}
+      		</div>	
+      	@endif
+
+      	<a class="btn btn-primary" href="/pertanyaan/create">Menambah Pertanyaan</a>
+        <div class="mt-4">
         <table class="table table-bordered">
           <thead>                  
             <tr>
@@ -23,10 +31,15 @@
           			<td> {{ $key + 1 }} </td>
           			<td> {{ $tpertanyaan->judul }}</td>
           			<td> {{ $tpertanyaan->isi }}</td>
+          			<td style="display: inline-flex;">
+          				<a href="/pertanyaan/{{$tpertanyaan->id}}" class="btn btn-info btn-sm">show</a>
+          				<a href="/pertanyaan/{{$tpertanyaan->id}}/edit" class="btn btn-info btn-sm">edit</a>
+          			</td>
           		</tr>
           	@endforeach
           </tbody>
         </table>
+    	</div>
       </div>
       <!-- /.card-body -->
     </div>

@@ -29,15 +29,17 @@ class PertanyaanController extends Controller
         ]
         );
 
-        return redirect('/pertanyaan/create'); 
+        return redirect('/pertanyaan')->with('success','Pertanyaan berhasil'); 
     }
 
-    public function show() {
-    	return view('pertanyaan.show');
+    public function show($id) {
+    	$tpertanyaan = DB::table('pertanyaan')->where('id',$id )->first();
+        return view('pertanyaan.show', compact('tpertanyaan'));
     }
 
-    public function edit() {
-    	return view('pertanyaan.edit');
+    public function edit($id) {
+    	$tpertanyaan = DB::table('pertanyaan')->where('id',$id)->first();
+        return view('pertanyaan.edit', compact('tpertanyaan'));
     }
 
     public function update() {

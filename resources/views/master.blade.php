@@ -16,7 +16,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<body class="hold-transition sidebar-mini">
+<body>
 <!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
@@ -25,12 +25,8 @@
 
   <!-- Main Sidebar Container -->
 
-    <!-- Sidebar -->
-    @include ('adminlte.sidebar')
-    <!-- /.sidebar -->
-
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="ml-3 mr-3 mt-3">
     @yield ('content')
   </div>
   <!-- /.content-wrapper -->

@@ -17,8 +17,8 @@ class CreatePertanyaanTable extends Migration
             $table->bigIncrements('id');
             $table->string('judul');
             $table->string('isi');
-            $table->date('tanggal_dibuat');
-            $table->date('tanggal_diperbaharui');
+            $table->date('tanggal_dibuat')->nullable();
+            $table->date('tanggal_diperbaharui')->nullable();
             
             $table->unsignedBigInteger('jawaban_tepat_id');
             $table->unsignedBigInteger('profil_id');
